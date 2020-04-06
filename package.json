@@ -1,0 +1,8 @@
+{
+  "name": "indunil1322prjct",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "2.644.0"
+  }
+}
