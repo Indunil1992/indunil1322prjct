@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "indunil1322prjct.js",
         "cursor": {
-          "lineNumber": 5,
-          "column": 3
+          "lineNumber": 6,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -57,11 +57,50 @@
           "snsType": 0,
           "subscriptions": []
         }
+      },
+      "ddbStripeSubscriptions": {
+        "name": "ddbStripeSubscriptions",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/StripeSubscriptions",
+            "name": "StripeSubscriptions",
+            "partitionKey": "sub_id",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 1,
+            "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/StripeSubscriptions/stream/2020-02-20T11:52:23.983"
+          }
+        }
+      },
+      "sqsKTestSQS": {
+        "name": "sqsKTestSQS",
+        "type": "SQS",
+        "config": {
+          "mode": 1,
+          "existing": true,
+          "name": "KTestSQS",
+          "url": "https://sqs.us-east-1.amazonaws.com/318300609668/KTestSQS",
+          "selectedRegion": "us-east-1",
+          "deliveryDelay": "0",
+          "deliveryDelayUnit": "seconds",
+          "queueType": "standardQueue",
+          "defaultVisibilityTimeout": "30",
+          "defaultVisibilityTimeoutUnit": "seconds",
+          "messageRetentionPeriod": "345600",
+          "messageRetentionPeriodUnit": "seconds",
+          "maximumMessageSize": 256,
+          "receiveMessageWaitTime": "0",
+          "queueARN": "arn:aws:sqs:us-east-1:318300609668:KTestSQS"
+        }
       }
     },
     "customTemplate": {
-      "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -94,7 +133,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586152235207
+    "lastSave": 1586152616576
   },
   "VCS_STATE": {
     "provider": "GitHub",
